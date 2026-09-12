@@ -1255,6 +1255,169 @@ textarea:focus-visible{
   .price-detail{margin:0 28px 28px}
   .contact-helper-grid{grid-template-columns:1fr}
 }
+
+
+/* AQORIA PRODUCTS */
+.products-section{
+  background:
+    radial-gradient(circle at 88% 10%,rgba(93,116,255,.08),transparent 27%),
+    rgba(255,255,255,.008);
+}
+.product-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.product-card{
+  min-height:470px;
+  padding:32px;
+  border:1px solid var(--line2);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018)),
+    #0e192c;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 26px 70px rgba(0,0,0,.16);
+}
+.product-card:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(125deg,rgba(109,132,255,.07),transparent 38%);
+}
+.product-card.accent:before{
+  background:radial-gradient(circle at 92% 8%,rgba(77,183,255,.14),transparent 30%);
+}
+.product-card-top{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:18px;
+}
+.product-index{
+  display:block;
+  font-size:9px;
+  letter-spacing:.17em;
+  color:#7887a2;
+}
+.product-status{
+  display:inline-flex;
+  margin-top:10px;
+  padding:6px 9px;
+  border:1px solid rgba(126,224,255,.28);
+  color:#9ee9ff;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.11em;
+}
+.product-type{
+  color:#7f8da5;
+  font-size:9px;
+  letter-spacing:.14em;
+  text-align:right;
+}
+.product-copy{
+  position:relative;
+  z-index:1;
+  margin-top:66px;
+}
+.product-copy h3{
+  margin:0;
+  font-size:clamp(30px,3vw,44px);
+  line-height:1.05;
+  letter-spacing:-.045em;
+  font-weight:580;
+}
+.product-copy p{
+  margin:20px 0 0;
+  max-width:590px;
+  color:#b7c2d4;
+  font-size:14px;
+  line-height:1.9;
+}
+.product-tags{
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:26px;
+}
+.product-tags span{
+  padding:6px 9px;
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.025);
+  color:#8f9db4;
+  font-size:9px;
+}
+.product-footer{
+  position:relative;
+  z-index:1;
+  margin-top:auto;
+  padding-top:26px;
+  border-top:1px solid var(--line);
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:20px;
+}
+.product-footer small{
+  display:block;
+  color:#74839d;
+  font-size:8px;
+  letter-spacing:.15em;
+}
+.product-footer strong{
+  display:block;
+  margin-top:4px;
+  font-size:12px;
+  color:#d7deea;
+}
+.product-link{
+  min-height:44px;
+  padding:0 15px;
+  border:1px solid rgba(255,255,255,.18);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#f5f8ff;
+  font-size:11px;
+  font-weight:800;
+  white-space:nowrap;
+  transition:.2s ease;
+}
+.product-link:hover{
+  transform:translateY(-1px);
+  border-color:rgba(156,174,255,.65);
+  background:rgba(255,255,255,.035);
+}
+.product-link.primary{
+  background:#f7f9ff;
+  color:#08111f;
+  border-color:#f7f9ff;
+}
+.product-note{
+  margin-top:16px;
+  color:#71809a;
+  font-size:10px;
+  line-height:1.8;
+}
+@media(max-width:980px){
+  .product-grid{grid-template-columns:1fr}
+  .product-card{min-height:430px}
+}
+@media(max-width:560px){
+  .product-card{padding:24px;min-height:auto}
+  .product-copy{margin-top:44px}
+  .product-footer{align-items:stretch;flex-direction:column}
+  .product-link{width:100%}
+}
+
 </style>
 </head>
 <body>
@@ -1270,6 +1433,7 @@ textarea:focus-visible{
 </a>
 <nav class="navlinks">
 <a href="#services">SERVICES</a>
+<a href="#products">PRODUCTS</a>
 <a href="#works">WORKS</a>
 <a href="#pricing">PRICING</a>
 <a href="#about">ABOUT</a>
@@ -1281,14 +1445,14 @@ textarea:focus-visible{
 <div class="container hero-inner">
 <div>
 <div class="eyebrow">AI STRATEGY / PRODUCT DEVELOPMENT</div>
-<h1>AIとテクノロジーで<span>事業を前へ。</span></h1>
+<h1>AIとテクノロジーで<span>事業を前へ</span></h1>
 <p class="hero-copy">
         生成AI導入支援・業務プロセス設計・AIシステム開発・Webアプリ開発。
         課題整理から設計・実装・導入・改善まで一貫して支援します。
       </p>
 <div class="hero-actions">
 <a class="btn primary" href="#contact">初回相談をする ↗</a>
-<a class="btn secondary" href="#works">制作実績を見る</a>
+<a class="btn secondary" href="#products">プロダクトを見る</a>
 </div>
 </div>
 <div aria-hidden="true" class="visual">
@@ -1336,7 +1500,7 @@ textarea:focus-visible{
 <div class="section-head">
 <div>
 <div class="kicker">01 / SERVICES</div>
-<h2 class="section-title">課題整理から実装まで。</h2>
+<h2 class="section-title">課題整理から実装まで</h2>
 </div>
 <p>AIだけを導入するのではなく まず業務そのものを整理します。そのうえで必要な技術を組み合わせ 実際の現場で使える状態まで構築します。</p>
 </div>
@@ -1441,7 +1605,7 @@ textarea:focus-visible{
 <div class="section-head">
 <div>
 <div class="kicker">02 / INDUSTRIES</div>
-<h2 class="section-title">現場に合わせたAI・システム設計。</h2>
+<h2 class="section-title">現場に合わせたAI・システム設計</h2>
 </div>
 <p>既製の仕組みをそのまま当てはめるのではなく 業界・業務・運用方法に合わせて必要な機能を設計します。</p>
 </div>
@@ -1458,7 +1622,7 @@ textarea:focus-visible{
 <div class="section-head">
 <div>
 <div class="kicker">03 / IMPACT</div>
-<h2 class="section-title">業務を「作業」から「仕組み」へ。</h2>
+<h2 class="section-title">業務を「作業」から「仕組み」へ</h2>
 </div>
 <p>繰り返し発生する手作業を整理し AIやWebシステムを使って 継続して回る業務フローへ変えていきます。</p>
 </div>
@@ -1512,12 +1676,78 @@ textarea:focus-visible{
 </div>
 </div>
 </section>
+<section class="section products-section" id="products">
+<div class="container">
+<div class="section-head">
+<div>
+<div class="kicker">04 / PRODUCTS</div>
+<h2 class="section-title">AQORIAのプロダクト</h2>
+</div>
+<p>実際に操作できるプロダクトを公開しています。導入前のイメージ確認や 業務に合うかの検討にそのままご利用いただけます。</p>
+</div>
+<div class="product-grid">
+<article class="product-card">
+<div class="product-card-top">
+<div>
+<span class="product-index">PRODUCT 01</span>
+<div class="product-status">DEMO AVAILABLE</div>
+</div>
+<span class="product-type">KNOWLEDGE / SUPPORT</span>
+</div>
+<div class="product-copy">
+<h3>AQORIA Assist</h3>
+<p>社内資料・マニュアル・FAQをまとめて検索し 根拠となる資料を確認しながら問い合わせ対応を支援する業務アシスタントです。</p>
+</div>
+<div class="product-tags">
+<span>社内ナレッジ検索</span>
+<span>根拠資料表示</span>
+<span>問い合わせ支援</span>
+<span>履歴・分析</span>
+</div>
+<div class="product-footer">
+<div>
+<small>SALES DEMO</small>
+<strong>実際の画面を確認</strong>
+</div>
+<a class="product-link" href="https://aqoria-assist.vercel.app" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
+</div>
+</article>
+<article class="product-card accent">
+<div class="product-card-top">
+<div>
+<span class="product-index">PRODUCT 02</span>
+<div class="product-status">LIVE DEMO</div>
+</div>
+<span class="product-type">SALES / CRM</span>
+</div>
+<div class="product-copy">
+<h3>AQORIA Connect</h3>
+<p>見込み客・案件・問い合わせ・次回フォローを一つの画面で管理し 営業の「次にやること」を分かりやすくする営業管理システムです。</p>
+</div>
+<div class="product-tags">
+<span>見込み客管理</span>
+<span>案件・見込売上</span>
+<span>問い合わせ管理</span>
+<span>フォロー予定</span>
+</div>
+<div class="product-footer">
+<div>
+<small>INTERACTIVE DEMO</small>
+<strong>登録不要で操作</strong>
+</div>
+<a class="product-link primary" href="https://aqoria-connect.vercel.app" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
+</div>
+</article>
+</div>
+<div class="product-note">公開デモでは架空データを使用しています。実際の導入時は 利用人数・権限・データ・運用方法に合わせて構成を調整します。</div>
+</div>
+</section>
 <section class="section deep" id="works">
 <div class="container">
 <div class="section-head">
 <div>
-<div class="kicker">04 / WORKS</div>
-<h2 class="section-title">開発実績。</h2>
+<div class="kicker">05 / WORKS</div>
+<h2 class="section-title">開発実績</h2>
 </div>
 <p>画面を作るだけでなく 利用者の操作から管理・データ更新・運用まで含めて設計しています。</p>
 </div>
@@ -1642,8 +1872,8 @@ textarea:focus-visible{
 <div class="container">
 <div class="section-head">
 <div>
-<div class="kicker">05 / PROCESS</div>
-<h2 class="section-title">導入までの流れ。</h2>
+<div class="kicker">06 / PROCESS</div>
+<h2 class="section-title">導入までの流れ</h2>
 </div>
 <p>相談時点で仕様が決まっていなくても問題ありません。業務と目的を整理し 必要な範囲を一つずつ決めながら進めます。</p>
 </div>
@@ -1661,8 +1891,8 @@ textarea:focus-visible{
 <div class="container">
 <div class="section-head">
 <div>
-<div class="kicker">06 / PRICING</div>
-<h2 class="section-title">小さく始める。</h2>
+<div class="kicker">07 / PRICING</div>
+<h2 class="section-title">小さく始める</h2>
 </div>
 <p>表示価格は参考料金です。必要な機能やデータ量 外部サービスとの連携範囲を確認したうえで 事前に見積もりを提示します。</p>
 </div>
@@ -1744,8 +1974,8 @@ textarea:focus-visible{
 <div class="container">
 <div class="section-head">
 <div>
-<div class="kicker">07 / SECURITY</div>
-<h2 class="section-title">情報管理への配慮。</h2>
+<div class="kicker">08 / SECURITY</div>
+<h2 class="section-title">情報管理への配慮</h2>
 </div>
 <p>AIや業務システムでは 便利さだけでなく どの情報を扱い 誰がアクセスできるかを設計段階から確認します。</p>
 </div>
@@ -1763,8 +1993,8 @@ textarea:focus-visible{
 <div class="container">
 <div class="section-head">
 <div>
-<div class="kicker">08 / ABOUT</div>
-<h2 class="section-title">AQORIAについて。</h2>
+<div class="kicker">09 / ABOUT</div>
+<h2 class="section-title">AQORIAについて</h2>
 </div>
 <p>生成AIとWebテクノロジーを活用し 課題整理から設計・開発・導入後の改善まで一貫して対応します。</p>
 </div>
