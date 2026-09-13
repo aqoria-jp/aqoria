@@ -1582,6 +1582,119 @@ textarea:focus-visible{
 @media(max-width:600px){
   .service-menu{grid-template-columns:1fr}
 }
+
+/* ===== AQORIA layout polish v3 ===== */
+
+/* Desktop: section headings should stay as one meaningful phrase */
+@media (min-width:1180px){
+  .section-head{
+    grid-template-columns:max-content minmax(320px,1fr);
+    gap:48px;
+    align-items:end;
+  }
+  .section-title{
+    white-space:nowrap;
+    word-break:keep-all;
+    overflow-wrap:normal;
+    text-wrap:nowrap;
+    font-size:clamp(38px,3.05vw,50px);
+    line-height:1.08;
+    letter-spacing:-.035em;
+  }
+}
+
+/* Medium screens: stop squeezing titles into the old narrow 390px column */
+@media (min-width:761px) and (max-width:1179px){
+  .section-head{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  .section-title{
+    max-width:none;
+    font-size:clamp(36px,5vw,50px);
+    line-height:1.12;
+    word-break:keep-all;
+    overflow-wrap:normal;
+    text-wrap:balance;
+  }
+  .section-head p{
+    max-width:820px;
+  }
+}
+
+/* Mobile can wrap, but with more natural line lengths */
+@media (max-width:760px){
+  .section-title{
+    font-size:clamp(32px,10vw,43px);
+    line-height:1.14;
+    letter-spacing:-.035em;
+    word-break:auto-phrase;
+    text-wrap:balance;
+  }
+}
+
+/* Product group headings also avoid awkward one-word wraps on desktop */
+@media (min-width:900px){
+  .product-group-head h3{
+    white-space:nowrap;
+    word-break:keep-all;
+  }
+}
+
+/* Expanded pricing details: give every row enough vertical room.
+   This removes the bullet/text collisions seen in the current page. */
+.price-detail ul{
+  gap:0;
+  margin-top:14px;
+  border-bottom:1px solid var(--line);
+}
+.price-detail li{
+  min-height:50px;
+  padding:14px 4px 14px 20px;
+  border-top:1px solid var(--line);
+  line-height:1.65;
+  display:flex;
+  align-items:center;
+}
+.price-detail li::before{
+  top:50%;
+  transform:translateY(-50%);
+  left:1px;
+  width:5px;
+  height:5px;
+}
+.price-detail h4{
+  margin-bottom:12px;
+}
+.price-detail p{
+  margin-top:18px;
+  line-height:1.85;
+}
+
+/* Keep pricing summary text comfortably separated */
+.price-card summary{
+  min-height:250px;
+}
+.price-card summary h3{
+  line-height:1.25;
+}
+.price-card summary strong{
+  line-height:1.1;
+  margin-top:18px;
+}
+.price-card summary p{
+  line-height:1.75;
+  margin-top:14px;
+}
+
+/* Avoid cramped content in expandable service cards as well */
+.service-detail{
+  padding-bottom:4px;
+}
+.service-detail li{
+  line-height:1.75;
+}
+
 </style>
 </head>
 <body>
