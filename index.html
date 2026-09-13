@@ -1421,6 +1421,86 @@ textarea:focus-visible{
   .product-link{width:100%}
 }
 
+
+.product-index-panel{
+  margin:0 0 24px;
+  padding:22px;
+  border:1px solid rgba(135,169,207,.18);
+  background:linear-gradient(180deg,rgba(14,29,49,.92),rgba(9,22,38,.92));
+}
+.product-index-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:16px;
+}
+.product-index-head>span{
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.18em;
+  color:#8fe2ff;
+}
+.product-index-head p{
+  margin:0;
+  color:#8fa4b8;
+  font-size:11px;
+}
+.product-index-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;
+}
+.product-index-link{
+  display:grid;
+  grid-template-columns:30px 1fr 14px;
+  gap:10px;
+  align-items:center;
+  min-height:68px;
+  padding:11px 12px;
+  border:1px solid rgba(135,169,207,.16);
+  background:rgba(7,18,31,.68);
+  transition:.18s ease;
+}
+.product-index-link:hover{
+  transform:translateY(-2px);
+  border-color:rgba(102,220,255,.55);
+  background:rgba(18,48,76,.72);
+}
+.product-index-link small{
+  color:#647e98;
+  font-size:9px;
+}
+.product-index-link strong{
+  display:block;
+  font-size:12px;
+}
+.product-index-link span{
+  display:block;
+  margin-top:4px;
+  color:#7f96ad;
+  font-size:9px;
+}
+.product-index-link>b{
+  color:#82dffb;
+  font-size:12px;
+}
+.product-card{
+  scroll-margin-top:90px;
+}
+@media(max-width:1080px){
+  .product-index-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .product-index-panel{padding:14px}
+  .product-index-head{display:block}
+  .product-index-head p{margin-top:6px}
+  .product-index-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:480px){
+  .product-index-grid{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
@@ -1688,8 +1768,78 @@ textarea:focus-visible{
 </div>
 <p>実際に操作できるプロダクトを公開しています。導入前のイメージ確認や 業務に合うかの検討にそのままご利用いただけます。</p>
 </div>
+
+<div class="product-index-panel">
+  <div class="product-index-head">
+    <span>PRODUCT INDEX</span>
+    <p>気になるプロダクトを選ぶと、詳細まで移動できます</p>
+  </div>
+  <div class="product-index-grid">
+    <a href="#product-assist" class="product-index-link">
+      <small>01</small>
+      <div><strong>AQORIA Assist</strong><span>社内ナレッジ</span></div>
+      <b>↓</b>
+    </a>
+    <a href="#product-connect" class="product-index-link">
+      <small>02</small>
+      <div><strong>AQORIA Connect</strong><span>営業・CRM</span></div>
+      <b>↓</b>
+    </a>
+    <a href="#product-reply" class="product-index-link">
+      <small>03</small>
+      <div><strong>AQORIA Reply</strong><span>問い合わせ対応</span></div>
+      <b>↓</b>
+    </a>
+    <a href="#product-knowledge" class="product-index-link">
+      <small>04</small>
+      <div><strong>AQORIA Knowledge</strong><span>FAQ改善</span></div>
+      <b>↓</b>
+    </a>
+    <a href="#product-manual" class="product-index-link">
+      <small>05</small>
+      <div><strong>AQORIA Manual</strong><span>マニュアル</span></div>
+      <b>↓</b>
+    </a>
+    <a href="#product-learn" class="product-index-link">
+      <small>06</small>
+      <div><strong>AQORIA Learn</strong><span>新人研修</span></div>
+      <b>↓</b>
+    </a>
+    <a href="#product-handoff" class="product-index-link">
+      <small>07</small>
+      <div><strong>AQORIA Handoff</strong><span>引き継ぎ</span></div>
+      <b>↓</b>
+    </a>
+    <a href="#product-recruit" class="product-index-link">
+      <small>08</small>
+      <div><strong>AQORIA Recruit</strong><span>採用</span></div>
+      <b>↓</b>
+    </a>
+    <a href="#product-estate" class="product-index-link">
+      <small>09</small>
+      <div><strong>AQORIA Estate</strong><span>不動産</span></div>
+      <b>↓</b>
+    </a>
+    <a href="#product-school" class="product-index-link">
+      <small>10</small>
+      <div><strong>AQORIA School</strong><span>教育</span></div>
+      <b>↓</b>
+    </a>
+    <a href="#product-retail" class="product-index-link">
+      <small>11</small>
+      <div><strong>AQORIA Retail</strong><span>店舗・小売</span></div>
+      <b>↓</b>
+    </a>
+    <a href="#product-ops" class="product-index-link">
+      <small>12</small>
+      <div><strong>AQORIA Ops</strong><span>業務改善</span></div>
+      <b>↓</b>
+    </a>
+  </div>
+</div>
+
 <div class="product-grid">
-<article class="product-card">
+<article id="product-assist" class="product-card">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 01</span>
@@ -1715,7 +1865,7 @@ textarea:focus-visible{
 <a class="product-link primary" href="https://aqoria-assist.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
 </div>
 </article>
-<article class="product-card accent">
+<article id="product-connect" class="product-card accent">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 02</span>
@@ -1741,7 +1891,7 @@ textarea:focus-visible{
 <a class="product-link primary" href="https://aqoria-connect.vercel.app" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
 </div>
 </article>
-<article class="product-card">
+<article id="product-reply" class="product-card">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 03</span>
@@ -1767,7 +1917,7 @@ textarea:focus-visible{
 <a class="product-link primary" href="https://aqoria-reply.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
 </div>
 </article>
-<article class="product-card accent">
+<article id="product-knowledge" class="product-card accent">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 04</span>
@@ -1793,7 +1943,7 @@ textarea:focus-visible{
 <a class="product-link primary" href="https://aqoria-knowledge.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
 </div>
 </article>
-<article class="product-card">
+<article id="product-manual" class="product-card">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 05</span>
@@ -1819,7 +1969,7 @@ textarea:focus-visible{
 <a class="product-link primary" href="https://aqoria-manual.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
 </div>
 </article>
-<article class="product-card accent">
+<article id="product-learn" class="product-card accent">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 06</span>
@@ -1845,7 +1995,7 @@ textarea:focus-visible{
 <a class="product-link primary" href="https://aqoria-learn.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
 </div>
 </article>
-<article class="product-card">
+<article id="product-handoff" class="product-card">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 07</span>
@@ -1871,7 +2021,7 @@ textarea:focus-visible{
 <a class="product-link primary" href="https://aqoria-handoff.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
 </div>
 </article>
-<article class="product-card accent">
+<article id="product-recruit" class="product-card accent">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 08</span>
@@ -1897,7 +2047,7 @@ textarea:focus-visible{
 <a class="product-link primary" href="https://aqoria-recruit.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
 </div>
 </article>
-<article class="product-card">
+<article id="product-estate" class="product-card">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 09</span>
@@ -1923,7 +2073,7 @@ textarea:focus-visible{
 <a class="product-link primary" href="https://aqoria-estate.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
 </div>
 </article>
-<article class="product-card accent">
+<article id="product-school" class="product-card accent">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 10</span>
@@ -1949,7 +2099,7 @@ textarea:focus-visible{
 <a class="product-link primary" href="https://aqoria-school.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
 </div>
 </article>
-<article class="product-card">
+<article id="product-retail" class="product-card">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 11</span>
@@ -1975,7 +2125,7 @@ textarea:focus-visible{
 <a class="product-link primary" href="https://aqoria-retail.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
 </div>
 </article>
-<article class="product-card accent">
+<article id="product-ops" class="product-card accent">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 12</span>
