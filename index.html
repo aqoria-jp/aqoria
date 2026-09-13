@@ -6,7 +6,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>AQORIA — AI Strategy / Product Development</title>
 <link href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE0IiBmaWxsPSIjMDgxMTFmIi8+CjxwYXRoIGQ9Ik0xMCA1MUwzMCAxMGg4bDE2IDQxaC05bC00LTExSDIzbC01IDExeiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjdmOWZmIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTI3IDMxaDExIiBzdHJva2U9IiM2ZDg0ZmYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxwYXRoIGQ9Ik0zOCAxNGw5IDIyIiBzdHJva2U9IiM5Y2FlZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPg==" rel="icon" type="image/svg+xml"/>
-<meta content="生成AI導入支援・業務設計・AIシステム開発・Webアプリ開発。" name="description"/>
+<meta content="AQORIAは、AI導入・業務改善・Webシステム開発を支援します。実際に操作できる公開デモから導入イメージをご確認いただけます。" name="description"/>
 <style>
 :root{
   --bg:#08111f;
@@ -1263,11 +1263,7 @@ textarea:focus-visible{
     radial-gradient(circle at 88% 10%,rgba(93,116,255,.08),transparent 27%),
     rgba(255,255,255,.008);
 }
-.product-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px;
-}
+.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
 .product-card{
   min-height:430px;
   padding:32px;
@@ -1407,13 +1403,7 @@ textarea:focus-visible{
   font-size:10px;
   line-height:1.8;
 }
-@media(max-width:1180px){
-  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media(max-width:760px){
-  .product-grid{grid-template-columns:1fr}
-  .product-card{min-height:430px}
-}
+
 @media(max-width:560px){
   .product-card{padding:24px;min-height:auto}
   .product-copy{margin-top:44px}
@@ -1422,85 +1412,61 @@ textarea:focus-visible{
 }
 
 
-.product-index-panel{
-  margin:0 0 24px;
-  padding:22px;
-  border:1px solid rgba(135,169,207,.18);
-  background:linear-gradient(180deg,rgba(14,29,49,.92),rgba(9,22,38,.92));
+/* PRODUCTS — purpose based grouping */
+.product-groups{
+  display:grid;
+  gap:54px;
 }
-.product-index-head{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:20px;
-  margin-bottom:16px;
+.product-group{
+  padding-top:4px;
 }
-.product-index-head>span{
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:.18em;
-  color:#8fe2ff;
+.product-group + .product-group{
+  padding-top:42px;
+  border-top:1px solid var(--line);
 }
-.product-index-head p{
+.product-group-head{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:44px;
+  align-items:end;
+  margin-bottom:18px;
+}
+.product-group-head span{
+  display:block;
+  color:#8498ff;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.16em;
+}
+.product-group-head h3{
+  margin:8px 0 0;
+  font-size:25px;
+  font-weight:560;
+  letter-spacing:-.025em;
+}
+.product-group-head p{
   margin:0;
-  color:#8fa4b8;
-  font-size:11px;
-}
-.product-index-grid{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:8px;
-}
-.product-index-link{
-  display:grid;
-  grid-template-columns:30px 1fr 14px;
-  gap:10px;
-  align-items:center;
-  min-height:68px;
-  padding:11px 12px;
-  border:1px solid rgba(135,169,207,.16);
-  background:rgba(7,18,31,.68);
-  transition:.18s ease;
-}
-.product-index-link:hover{
-  transform:translateY(-2px);
-  border-color:rgba(102,220,255,.55);
-  background:rgba(18,48,76,.72);
-}
-.product-index-link small{
-  color:#647e98;
-  font-size:9px;
-}
-.product-index-link strong{
-  display:block;
+  max-width:720px;
+  color:#8e9db2;
   font-size:12px;
-}
-.product-index-link span{
-  display:block;
-  margin-top:4px;
-  color:#7f96ad;
-  font-size:9px;
-}
-.product-index-link>b{
-  color:#82dffb;
-  font-size:12px;
+  line-height:1.8;
 }
 .product-card{
-  scroll-margin-top:90px;
+  min-height:390px;
 }
-@media(max-width:1080px){
-  .product-index-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.product-copy{
+  margin-top:48px;
+}
+@media(max-width:1180px){
+  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:760px){
-  .product-index-panel{padding:14px}
-  .product-index-head{display:block}
-  .product-index-head p{margin-top:6px}
-  .product-index-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .product-group-head{grid-template-columns:1fr;gap:8px}
+  .product-grid{grid-template-columns:1fr}
+  .product-groups{gap:42px}
+  .product-group + .product-group{padding-top:34px}
+  .product-card{min-height:auto}
 }
-@media(max-width:480px){
-  .product-index-grid{grid-template-columns:1fr}
-}
-
 </style>
 </head>
 <body>
@@ -1766,80 +1732,10 @@ textarea:focus-visible{
 <div class="kicker">04 / PRODUCTS</div>
 <h2 class="section-title">AQORIAのプロダクト</h2>
 </div>
-<p>実際に操作できるプロダクトを公開しています。導入前のイメージ確認や 業務に合うかの検討にそのままご利用いただけます。</p>
+<p>業務課題や業界ごとに、実際に操作できる公開デモを用意しています。まず近い用途のデモを触って、導入後のイメージをご確認ください。</p>
 </div>
 
-<div class="product-index-panel">
-  <div class="product-index-head">
-    <span>PRODUCT INDEX</span>
-    <p>気になるプロダクトを選ぶと、詳細まで移動できます</p>
-  </div>
-  <div class="product-index-grid">
-    <a href="#product-assist" class="product-index-link">
-      <small>01</small>
-      <div><strong>AQORIA Assist</strong><span>社内ナレッジ</span></div>
-      <b>↓</b>
-    </a>
-    <a href="#product-connect" class="product-index-link">
-      <small>02</small>
-      <div><strong>AQORIA Connect</strong><span>営業・CRM</span></div>
-      <b>↓</b>
-    </a>
-    <a href="#product-reply" class="product-index-link">
-      <small>03</small>
-      <div><strong>AQORIA Reply</strong><span>問い合わせ対応</span></div>
-      <b>↓</b>
-    </a>
-    <a href="#product-knowledge" class="product-index-link">
-      <small>04</small>
-      <div><strong>AQORIA Knowledge</strong><span>FAQ改善</span></div>
-      <b>↓</b>
-    </a>
-    <a href="#product-manual" class="product-index-link">
-      <small>05</small>
-      <div><strong>AQORIA Manual</strong><span>マニュアル</span></div>
-      <b>↓</b>
-    </a>
-    <a href="#product-learn" class="product-index-link">
-      <small>06</small>
-      <div><strong>AQORIA Learn</strong><span>新人研修</span></div>
-      <b>↓</b>
-    </a>
-    <a href="#product-handoff" class="product-index-link">
-      <small>07</small>
-      <div><strong>AQORIA Handoff</strong><span>引き継ぎ</span></div>
-      <b>↓</b>
-    </a>
-    <a href="#product-recruit" class="product-index-link">
-      <small>08</small>
-      <div><strong>AQORIA Recruit</strong><span>採用</span></div>
-      <b>↓</b>
-    </a>
-    <a href="#product-estate" class="product-index-link">
-      <small>09</small>
-      <div><strong>AQORIA Estate</strong><span>不動産</span></div>
-      <b>↓</b>
-    </a>
-    <a href="#product-school" class="product-index-link">
-      <small>10</small>
-      <div><strong>AQORIA School</strong><span>教育</span></div>
-      <b>↓</b>
-    </a>
-    <a href="#product-retail" class="product-index-link">
-      <small>11</small>
-      <div><strong>AQORIA Retail</strong><span>店舗・小売</span></div>
-      <b>↓</b>
-    </a>
-    <a href="#product-ops" class="product-index-link">
-      <small>12</small>
-      <div><strong>AQORIA Ops</strong><span>業務改善</span></div>
-      <b>↓</b>
-    </a>
-  </div>
-</div>
-
-<div class="product-grid">
-<article id="product-assist" class="product-card">
+<div class="product-groups"><section class="product-group"><div class="product-group-head"><div><span>BUSINESS CORE</span><h3>業務基盤・社内効率化</h3></div><p>社内情報の検索、マニュアル化、引き継ぎ、日々の業務整理など、社内業務を整えるプロダクトです。</p></div><div class="product-grid"><article class="product-card" id="product-assist">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 01</span>
@@ -1862,62 +1758,9 @@ textarea:focus-visible{
 <small>INTERACTIVE DEMO</small>
 <strong>登録不要で操作</strong>
 </div>
-<a class="product-link primary" href="https://aqoria-assist.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
+<a class="product-link primary" href="https://aqoria-assist.vercel.app/demo" rel="noopener noreferrer" target="_blank">デモを開く ↗</a>
 </div>
-</article>
-<article id="product-connect" class="product-card accent">
-<div class="product-card-top">
-<div>
-<span class="product-index">PRODUCT 02</span>
-<div class="product-status">LIVE DEMO</div>
-</div>
-<span class="product-type">SALES / CRM</span>
-</div>
-<div class="product-copy">
-<h3>AQORIA Connect</h3>
-<p>見込み客・案件・問い合わせ・次回フォローを一つの画面で管理し、営業の「次にやること」を分かりやすくする営業管理システムです。</p>
-</div>
-<div class="product-tags">
-<span>見込み客管理</span>
-<span>案件・見込売上</span>
-<span>問い合わせ管理</span>
-<span>フォロー予定</span>
-</div>
-<div class="product-footer">
-<div>
-<small>INTERACTIVE DEMO</small>
-<strong>登録不要で操作</strong>
-</div>
-<a class="product-link primary" href="https://aqoria-connect.vercel.app" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
-</div>
-</article>
-<article id="product-reply" class="product-card">
-<div class="product-card-top">
-<div>
-<span class="product-index">PRODUCT 03</span>
-<div class="product-status">LIVE DEMO</div>
-</div>
-<span class="product-type">INQUIRY / SUPPORT</span>
-</div>
-<div class="product-copy">
-<h3>AQORIA Reply</h3>
-<p>問い合わせ内容を分類し、優先度・要約・返信案まで整理。対応漏れを減らし、返信作成を効率化する問い合わせ対応システムです。</p>
-</div>
-<div class="product-tags">
-<span>自動分類デモ</span>
-<span>優先度判定</span>
-<span>返信案作成</span>
-<span>対応ステータス</span>
-</div>
-<div class="product-footer">
-<div>
-<small>INTERACTIVE DEMO</small>
-<strong>登録不要で操作</strong>
-</div>
-<a class="product-link primary" href="https://aqoria-reply.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
-</div>
-</article>
-<article id="product-knowledge" class="product-card accent">
+</article><article class="product-card accent" id="product-knowledge">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 04</span>
@@ -1940,10 +1783,9 @@ textarea:focus-visible{
 <small>INTERACTIVE DEMO</small>
 <strong>登録不要で操作</strong>
 </div>
-<a class="product-link primary" href="https://aqoria-knowledge.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
+<a class="product-link primary" href="https://aqoria-knowledge.vercel.app/demo" rel="noopener noreferrer" target="_blank">デモを開く ↗</a>
 </div>
-</article>
-<article id="product-manual" class="product-card">
+</article><article class="product-card" id="product-manual">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 05</span>
@@ -1966,36 +1808,9 @@ textarea:focus-visible{
 <small>INTERACTIVE DEMO</small>
 <strong>登録不要で操作</strong>
 </div>
-<a class="product-link primary" href="https://aqoria-manual.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
+<a class="product-link primary" href="https://aqoria-manual.vercel.app/demo" rel="noopener noreferrer" target="_blank">デモを開く ↗</a>
 </div>
-</article>
-<article id="product-learn" class="product-card accent">
-<div class="product-card-top">
-<div>
-<span class="product-index">PRODUCT 06</span>
-<div class="product-status">LIVE DEMO</div>
-</div>
-<span class="product-type">ONBOARDING / TRAINING</span>
-</div>
-<div class="product-copy">
-<h3>AQORIA Learn</h3>
-<p>新人教育・研修・理解度テスト・質問対応をまとめて管理。教育の抜け漏れと担当者負担を減らす研修支援システムです。</p>
-</div>
-<div class="product-tags">
-<span>研修進捗</span>
-<span>理解度テスト</span>
-<span>質問管理</span>
-<span>受講者管理</span>
-</div>
-<div class="product-footer">
-<div>
-<small>INTERACTIVE DEMO</small>
-<strong>登録不要で操作</strong>
-</div>
-<a class="product-link primary" href="https://aqoria-learn.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
-</div>
-</article>
-<article id="product-handoff" class="product-card">
+</article><article class="product-card" id="product-handoff">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 07</span>
@@ -2018,114 +1833,9 @@ textarea:focus-visible{
 <small>INTERACTIVE DEMO</small>
 <strong>登録不要で操作</strong>
 </div>
-<a class="product-link primary" href="https://aqoria-handoff.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
+<a class="product-link primary" href="https://aqoria-handoff.vercel.app/demo" rel="noopener noreferrer" target="_blank">デモを開く ↗</a>
 </div>
-</article>
-<article id="product-recruit" class="product-card accent">
-<div class="product-card-top">
-<div>
-<span class="product-index">PRODUCT 08</span>
-<div class="product-status">LIVE DEMO</div>
-</div>
-<span class="product-type">RECRUITING / HR</span>
-</div>
-<div class="product-copy">
-<h3>AQORIA Recruit</h3>
-<p>候補者情報、面接メモ、選考状況、スカウト文を一元管理。採用担当者の判断とフォローを支援する採用管理システムです。</p>
-</div>
-<div class="product-tags">
-<span>候補者管理</span>
-<span>選考パイプライン</span>
-<span>面接メモ</span>
-<span>スカウト文</span>
-</div>
-<div class="product-footer">
-<div>
-<small>INTERACTIVE DEMO</small>
-<strong>登録不要で操作</strong>
-</div>
-<a class="product-link primary" href="https://aqoria-recruit.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
-</div>
-</article>
-<article id="product-estate" class="product-card">
-<div class="product-card-top">
-<div>
-<span class="product-index">PRODUCT 09</span>
-<div class="product-status">LIVE DEMO</div>
-</div>
-<span class="product-type">REAL ESTATE</span>
-</div>
-<div class="product-copy">
-<h3>AQORIA Estate</h3>
-<p>顧客の予算・エリア・間取りから物件候補を提案し、問い合わせ管理や日本語・英語の返信作成まで支援します。</p>
-</div>
-<div class="product-tags">
-<span>物件マッチング</span>
-<span>適合度表示</span>
-<span>問い合わせ管理</span>
-<span>多言語返信</span>
-</div>
-<div class="product-footer">
-<div>
-<small>INTERACTIVE DEMO</small>
-<strong>登録不要で操作</strong>
-</div>
-<a class="product-link primary" href="https://aqoria-estate.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
-</div>
-</article>
-<article id="product-school" class="product-card accent">
-<div class="product-card-top">
-<div>
-<span class="product-index">PRODUCT 10</span>
-<div class="product-status">LIVE DEMO</div>
-</div>
-<span class="product-type">EDUCATION</span>
-</div>
-<div class="product-copy">
-<h3>AQORIA School</h3>
-<p>学校・塾向けに課題配信、提出確認、再提出、理解度テスト、学習状況の可視化をまとめた教育支援システムです。</p>
-</div>
-<div class="product-tags">
-<span>課題・提出</span>
-<span>再提出指示</span>
-<span>理解度テスト</span>
-<span>学習分析</span>
-</div>
-<div class="product-footer">
-<div>
-<small>INTERACTIVE DEMO</small>
-<strong>登録不要で操作</strong>
-</div>
-<a class="product-link primary" href="https://aqoria-school.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
-</div>
-</article>
-<article id="product-retail" class="product-card">
-<div class="product-card-top">
-<div>
-<span class="product-index">PRODUCT 11</span>
-<div class="product-status">LIVE DEMO</div>
-</div>
-<span class="product-type">RETAIL / RECOMMEND</span>
-</div>
-<div class="product-copy">
-<h3>AQORIA Retail</h3>
-<p>用途・予算・重視条件から商品候補を整理し、おすすめ理由や接客トークまで提示する店舗・小売向け提案支援システムです。</p>
-</div>
-<div class="product-tags">
-<span>顧客診断</span>
-<span>商品提案</span>
-<span>適合度表示</span>
-<span>接客トーク</span>
-</div>
-<div class="product-footer">
-<div>
-<small>INTERACTIVE DEMO</small>
-<strong>登録不要で操作</strong>
-</div>
-<a class="product-link primary" href="https://aqoria-retail.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
-</div>
-</article>
-<article id="product-ops" class="product-card accent">
+</article><article class="product-card accent" id="product-ops">
 <div class="product-card-top">
 <div>
 <span class="product-index">PRODUCT 12</span>
@@ -2148,10 +1858,184 @@ textarea:focus-visible{
 <small>INTERACTIVE DEMO</small>
 <strong>登録不要で操作</strong>
 </div>
-<a class="product-link primary" href="https://aqoria-ops.vercel.app/demo" target="_blank" rel="noopener noreferrer">デモを開く ↗</a>
+<a class="product-link primary" href="https://aqoria-ops.vercel.app/demo" rel="noopener noreferrer" target="_blank">デモを開く ↗</a>
 </div>
-</article>
+</article></div></section><section class="product-group"><div class="product-group-head"><div><span>GROWTH &amp; CUSTOMER</span><h3>営業・顧客対応・採用</h3></div><p>見込み客管理、問い合わせ対応、採用業務など、顧客接点や事業成長に関わる業務を支援します。</p></div><div class="product-grid"><article class="product-card accent" id="product-connect">
+<div class="product-card-top">
+<div>
+<span class="product-index">PRODUCT 02</span>
+<div class="product-status">LIVE DEMO</div>
 </div>
+<span class="product-type">SALES / CRM</span>
+</div>
+<div class="product-copy">
+<h3>AQORIA Connect</h3>
+<p>見込み客・案件・問い合わせ・次回フォローを一つの画面で管理し、営業の「次にやること」を分かりやすくする営業管理システムです。</p>
+</div>
+<div class="product-tags">
+<span>見込み客管理</span>
+<span>案件・見込売上</span>
+<span>問い合わせ管理</span>
+<span>フォロー予定</span>
+</div>
+<div class="product-footer">
+<div>
+<small>INTERACTIVE DEMO</small>
+<strong>登録不要で操作</strong>
+</div>
+<a class="product-link primary" href="https://aqoria-connect.vercel.app" rel="noopener noreferrer" target="_blank">デモを開く ↗</a>
+</div>
+</article><article class="product-card" id="product-reply">
+<div class="product-card-top">
+<div>
+<span class="product-index">PRODUCT 03</span>
+<div class="product-status">LIVE DEMO</div>
+</div>
+<span class="product-type">INQUIRY / SUPPORT</span>
+</div>
+<div class="product-copy">
+<h3>AQORIA Reply</h3>
+<p>問い合わせ内容を分類し、優先度・要約・返信案まで整理。対応漏れを減らし、返信作成を効率化する問い合わせ対応システムです。</p>
+</div>
+<div class="product-tags">
+<span>自動分類デモ</span>
+<span>優先度判定</span>
+<span>返信案作成</span>
+<span>対応ステータス</span>
+</div>
+<div class="product-footer">
+<div>
+<small>INTERACTIVE DEMO</small>
+<strong>登録不要で操作</strong>
+</div>
+<a class="product-link primary" href="https://aqoria-reply.vercel.app/demo" rel="noopener noreferrer" target="_blank">デモを開く ↗</a>
+</div>
+</article><article class="product-card accent" id="product-recruit">
+<div class="product-card-top">
+<div>
+<span class="product-index">PRODUCT 08</span>
+<div class="product-status">LIVE DEMO</div>
+</div>
+<span class="product-type">RECRUITING / HR</span>
+</div>
+<div class="product-copy">
+<h3>AQORIA Recruit</h3>
+<p>候補者情報、面接メモ、選考状況、スカウト文を一元管理。採用担当者の判断とフォローを支援する採用管理システムです。</p>
+</div>
+<div class="product-tags">
+<span>候補者管理</span>
+<span>選考パイプライン</span>
+<span>面接メモ</span>
+<span>スカウト文</span>
+</div>
+<div class="product-footer">
+<div>
+<small>INTERACTIVE DEMO</small>
+<strong>登録不要で操作</strong>
+</div>
+<a class="product-link primary" href="https://aqoria-recruit.vercel.app/demo" rel="noopener noreferrer" target="_blank">デモを開く ↗</a>
+</div>
+</article></div></section><section class="product-group"><div class="product-group-head"><div><span>INDUSTRY SOLUTIONS</span><h3>業界・用途特化</h3></div><p>教育、不動産、店舗、新人研修など、特定の現場を想定した操作可能なデモです。</p></div><div class="product-grid"><article class="product-card" id="product-estate">
+<div class="product-card-top">
+<div>
+<span class="product-index">PRODUCT 09</span>
+<div class="product-status">LIVE DEMO</div>
+</div>
+<span class="product-type">REAL ESTATE</span>
+</div>
+<div class="product-copy">
+<h3>AQORIA Estate</h3>
+<p>顧客の予算・エリア・間取りから物件候補を提案し、問い合わせ管理や日本語・英語の返信作成まで支援します。</p>
+</div>
+<div class="product-tags">
+<span>物件マッチング</span>
+<span>適合度表示</span>
+<span>問い合わせ管理</span>
+<span>多言語返信</span>
+</div>
+<div class="product-footer">
+<div>
+<small>INTERACTIVE DEMO</small>
+<strong>登録不要で操作</strong>
+</div>
+<a class="product-link primary" href="https://aqoria-estate.vercel.app/demo" rel="noopener noreferrer" target="_blank">デモを開く ↗</a>
+</div>
+</article><article class="product-card accent" id="product-school">
+<div class="product-card-top">
+<div>
+<span class="product-index">PRODUCT 10</span>
+<div class="product-status">LIVE DEMO</div>
+</div>
+<span class="product-type">EDUCATION</span>
+</div>
+<div class="product-copy">
+<h3>AQORIA School</h3>
+<p>学校・塾向けに課題配信、提出確認、再提出、理解度テスト、学習状況の可視化をまとめた教育支援システムです。</p>
+</div>
+<div class="product-tags">
+<span>課題・提出</span>
+<span>再提出指示</span>
+<span>理解度テスト</span>
+<span>学習分析</span>
+</div>
+<div class="product-footer">
+<div>
+<small>INTERACTIVE DEMO</small>
+<strong>登録不要で操作</strong>
+</div>
+<a class="product-link primary" href="https://aqoria-school.vercel.app/demo" rel="noopener noreferrer" target="_blank">デモを開く ↗</a>
+</div>
+</article><article class="product-card accent" id="product-learn">
+<div class="product-card-top">
+<div>
+<span class="product-index">PRODUCT 06</span>
+<div class="product-status">LIVE DEMO</div>
+</div>
+<span class="product-type">ONBOARDING / TRAINING</span>
+</div>
+<div class="product-copy">
+<h3>AQORIA Learn</h3>
+<p>新人教育・研修・理解度テスト・質問対応をまとめて管理。教育の抜け漏れと担当者負担を減らす研修支援システムです。</p>
+</div>
+<div class="product-tags">
+<span>研修進捗</span>
+<span>理解度テスト</span>
+<span>質問管理</span>
+<span>受講者管理</span>
+</div>
+<div class="product-footer">
+<div>
+<small>INTERACTIVE DEMO</small>
+<strong>登録不要で操作</strong>
+</div>
+<a class="product-link primary" href="https://aqoria-learn.vercel.app/demo" rel="noopener noreferrer" target="_blank">デモを開く ↗</a>
+</div>
+</article><article class="product-card" id="product-retail">
+<div class="product-card-top">
+<div>
+<span class="product-index">PRODUCT 11</span>
+<div class="product-status">LIVE DEMO</div>
+</div>
+<span class="product-type">RETAIL / RECOMMEND</span>
+</div>
+<div class="product-copy">
+<h3>AQORIA Retail</h3>
+<p>用途・予算・重視条件から商品候補を整理し、おすすめ理由や接客トークまで提示する店舗・小売向け提案支援システムです。</p>
+</div>
+<div class="product-tags">
+<span>顧客診断</span>
+<span>商品提案</span>
+<span>適合度表示</span>
+<span>接客トーク</span>
+</div>
+<div class="product-footer">
+<div>
+<small>INTERACTIVE DEMO</small>
+<strong>登録不要で操作</strong>
+</div>
+<a class="product-link primary" href="https://aqoria-retail.vercel.app/demo" rel="noopener noreferrer" target="_blank">デモを開く ↗</a>
+</div>
+</article></div></section></div>
 <div class="product-note">公開デモでは架空データを使用しています。実際の導入時は 利用人数・権限・データ・運用方法に合わせて構成を調整します。</div>
 </div>
 </section>
